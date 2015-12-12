@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.binaryworkspace.rcp.jogl.Application">
+         </run>
+      </application>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.binaryworkspace.rcp.jogl.perspectives.Perspective"
+            id="com.binaryworkspace.rcp.jogl.perspectives.Perspective"
+            name="OpenGL Perspective">
+      </perspective>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.binaryworkspace.rcp.jogl.views.OneTriangleViewPart"
+            id="com.binaryworkspace.rcp.jogl.views.OneTriangleViewPart"
+            name="One Triangle (GL2)"
+            restorable="true">
+      </view>
+      <view
+            class="com.binaryworkspace.rcp.jogl.views.OneTriangleEmbeddedViewPart"
+            id="com.binaryworkspace.rcp.jogl.views.OneTriangleEmbeddedViewPart"
+            name="One Triangle Embedded (GL2)"
+            restorable="true">
+      </view>
+      <view
+            class="com.binaryworkspace.rcp.jogl.views.AnimatedOneTriangleViewPart"
+            id="com.binaryworkspace.rcp.jogl.views.AnimatedOneTriangleViewPart"
+            name="Animated One Triangle (GL2)"
+            restorable="true">
+      </view>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.binaryworkspace.rcp.jogl.application"
+            name="Binary Workspace - 05530 Eclipse RCP 3.x (4.5.1) - JOGL (2.1.5)">
+         <property
+               name="appName"
+               value="Binary Workspace - 05530 Eclipse RCP 3.x (4.5.1) - JOGL (2.1.5)">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

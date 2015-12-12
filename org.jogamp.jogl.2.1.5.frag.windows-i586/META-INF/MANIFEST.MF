@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JOGL-Windows-i586
+Bundle-SymbolicName: org.jogamp.jogl.2.1.5.frag.windows-i586
+Bundle-Version: 2.1.5
+Bundle-Vendor: JogAmp
+Fragment-Host: org.jogamp.jogl.2.1.5.plugin;bundle-version="2.1.5"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86))
